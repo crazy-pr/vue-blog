@@ -1,0 +1,21 @@
+{
+  "name": "code-doc",
+  "version": "1.0.0",
+  "description": "个人技术汇集",
+  "main": "index.js",
+  "scripts": {
+    "nav": "node ./utils/creatNav.js",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "mosowe",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-search": "^2.0.0-beta.53",
+    "vuepress": "^2.0.0-beta.53"
+  },
+  "dependencies": {
+    "@mosowe2/js": "^1.4.3",
+    "element-plus": "^2.2.21"
+  }
+}
