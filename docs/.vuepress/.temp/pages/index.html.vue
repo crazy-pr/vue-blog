@@ -33,21 +33,14 @@
 <li>同级目录下存在<code v-pre>index.md</code>和<code v-pre>readme.md</code>，左侧栏都会显示这两个路由名，但内容为后生成路由的那个文件；</li>
 <li>非<code v-pre>Group</code>结尾的文件夹下的文件，将会以一级菜单形式粗在于左侧栏；</li>
 <li><code v-pre>/.vuepress/components</code>文件夹存放的是vue3.x组件，不会自动全局注册，需要在<code v-pre>.vuepress/client.js</code>中<code v-pre>enhance</code>下注册，可以在<code v-pre>.md</code>文件中直接使用；</li>
-<li><code v-pre>/.vuepress/components</code>文件夹下<code v-pre>codeShow.vue</code>是用于组件演示使用，类似于element组件库演示那种类型，具体参考底部示例；</li>
 <li>侧边栏默认是全展开的形式；</li>
 <li>文中有二级标题的，点击该导航后将会在侧边栏生成二级导航，这种就是一篇到底的形式，采用锚点定位方式，如本页。</li>
 <li>打包后的<code v-pre>/dist</code>文件夹在<code v-pre>.vuepress</code>文件夹下</li>
 </ol>
-<h2 id="运行" tabindex="-1"><a class="header-anchor" href="#运行" aria-hidden="true">#</a> 运行</h2>
-<p>先生成侧边栏目录：</p>
-<p><code v-pre>npm run nav</code></p>
-<p>会生成/utils/sidebar.js文件，里面是侧边栏的数组</p>
-<p>本地运行：</p>
-<p><code v-pre>npm run dev</code></p>
-<p>打包：</p>
-<p><code v-pre>npm run build</code></p>
-<h2 id="codeshow演示" tabindex="-1"><a class="header-anchor" href="#codeshow演示" aria-hidden="true">#</a> codeShow演示</h2>
-<p><strong>注意：直接预览md文件不会渲染组件</strong></p>
+<h2 id="内置组件" tabindex="-1"><a class="header-anchor" href="#内置组件" aria-hidden="true">#</a> 内置组件</h2>
+<h3 id="codeshow" tabindex="-1"><a class="header-anchor" href="#codeshow" aria-hidden="true">#</a> codeShow</h3>
+<p>这个组件是一个代码演示组件，类似element组件演示那种
+<strong>注意：直接预览md文件不会渲染组件</strong></p>
 <CodeShow>
   <template #examples>
     <Test />
@@ -64,6 +57,14 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
         </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></CodeShow>
+<h2 id="运行" tabindex="-1"><a class="header-anchor" href="#运行" aria-hidden="true">#</a> 运行</h2>
+<p>先生成侧边栏目录：</p>
+<p><code v-pre>npm run nav</code></p>
+<p>会生成/utils/sidebar.js文件，里面是侧边栏的数组</p>
+<p>本地运行：</p>
+<p><code v-pre>npm run dev</code></p>
+<p>打包：</p>
+<p><code v-pre>npm run build</code></p>
 <h2 id="相关链接" tabindex="-1"><a class="header-anchor" href="#相关链接" aria-hidden="true">#</a> 相关链接</h2>
 <p><a href="https://v2.vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">vuepress<ExternalLinkIcon/></a></p>
 <p><a href="https://gitee.com/mosowe/vuepress3" target="_blank" rel="noopener noreferrer">码云地址<ExternalLinkIcon/></a></p>
