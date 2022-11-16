@@ -1,5 +1,7 @@
 node_modules
 .DS_Store
 dist
+.cache
+.temp
 dist-ssr
 *.local
