@@ -38,7 +38,7 @@
 <li>打包后的<code v-pre>/dist</code>文件夹在<code v-pre>.vuepress</code>文件夹下</li>
 </ol>
 <h2 id="内置组件" tabindex="-1"><a class="header-anchor" href="#内置组件" aria-hidden="true">#</a> 内置组件</h2>
-<h3 id="codeshow" tabindex="-1"><a class="header-anchor" href="#codeshow" aria-hidden="true">#</a> codeShow</h3>
+<h3 id="codeshow" tabindex="-1"><a class="header-anchor" href="#codeshow" aria-hidden="true">#</a> CodeShow</h3>
 <p>这个组件是一个代码演示组件，类似element组件演示那种
 <strong>注意：直接预览md文件不会渲染组件</strong></p>
 <CodeShow>
