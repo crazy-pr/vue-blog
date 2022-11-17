@@ -55,7 +55,7 @@ export default defineUserConfig({
         ],
         sidebar: require("../../utils/sidebar"),
         contributors: true,
-        contributorsText: 'mosowe',
+        contributorsText: '贡献者',
         smoothScroll: true,
     }),
     plugins: [
