@@ -100,6 +100,11 @@ export default {
     height: 40px;
     border-top: 1px solid #dcdfe6;
     text-align: right;
+    position: sticky;
+    left: 0;
+    top: 57px;
+    z-index: 19;
+    background: #fff;
     .item {
       cursor: pointer;
       display: inline-block;
