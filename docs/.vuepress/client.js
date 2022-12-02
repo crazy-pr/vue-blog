@@ -3,8 +3,6 @@ import {
 } from '@vuepress/client'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import CodeShow from './components/codeShow.vue'
-import Test from './components/test.vue'
 
 export default defineClientConfig({
     enhance({
@@ -13,8 +11,14 @@ export default defineClientConfig({
         siteData
     }) {
         app.use(ElementPlus)
-        app.component('CodeShow', CodeShow)
-        app.component('Test', Test)
+        // 自动注册components下的vue组件
+        const ctx =
+            import.meta.globEager('./components/*.vue')
+
+        Object.keys(ctx).forEach((item) => {
+            const component = ctx[item].default
+            app.component(item.replace(/(\.\/components\/)|(\.vue)/g, ''), component)
+        })
     },
     setup() {},
     rootComponents: [],
