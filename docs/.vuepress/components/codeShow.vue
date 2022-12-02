@@ -104,11 +104,12 @@ export default {
     left: 0;
     top: 57px;
     z-index: 19;
-    background: #fff;
+    background: var(--c-bg-navbar);
     .item {
       cursor: pointer;
       display: inline-block;
       margin: 0 5px;
+      color: var(--c-text);
       svg {
         width: 20px;
         height: 20px;
