@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@mosowe2/js": "^1.5.9",
-    "element-plus": "^2.2.21"
+    "element-plus": "^2.2.21",
+    "vuepress-plugin-anchor-right": "^0.0.1-beta.7"
   }
 }
