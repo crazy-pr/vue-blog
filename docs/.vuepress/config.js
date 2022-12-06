@@ -7,6 +7,11 @@ import {
 import {
     searchPlugin
 } from '@vuepress/plugin-search'
+import { containerPlugin } from '@vuepress/plugin-container'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { getDirname, path } from '@vuepress/utils'
+
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
     base: '/dist/',
@@ -58,7 +63,27 @@ export default defineUserConfig({
         contributorsText: '贡献者',
         smoothScroll: true,
     }),
+    markdown: {
+      importCode: {
+        handleImportPath: (str) =>
+          str.replace(/^@/, path.resolve(__dirname, './components')),
+      },
+    },
     plugins: [
-        searchPlugin()
+        searchPlugin(),
+        registerComponentsPlugin({
+          componentsDir: path.resolve(__dirname, './components'),
+        }),
+        containerPlugin({
+          type:"demo",
+          before: (info) => `
+          <ClientOnly>
+            <codeShow>
+              <template #examples>
+                ${info}
+              </template>
+          `,
+          after: () => `</codeShow></ClientOnly>`
+        })
     ],
 })

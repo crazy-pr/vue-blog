@@ -59,27 +59,9 @@
 这个组件是一个代码演示组件，类似element组件演示那种
 **注意：直接预览md文件不会渲染组件**
 
-<CodeShow>
-
-  <template #examples>
-    <Test />
-  </template>
-
-```vue
-        <template>
-          <div>
-            <el-button type="primary">按钮</el-button>
-          </div>
-        </template>
-
-        <script setup>
-        </script>
-
-        <style>
-        </style>
-```
-
-</CodeShow>
+::: demo <Test />
+@[code vue:no-line-numbers](@/Test.vue)
+:::
 
 
 ## 运行

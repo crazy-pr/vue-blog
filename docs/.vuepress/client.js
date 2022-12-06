@@ -11,14 +11,6 @@ export default defineClientConfig({
         siteData
     }) {
         app.use(ElementPlus)
-        // 自动注册components下的vue组件
-        const ctx =
-            import.meta.globEager('./components/*.vue')
-
-        Object.keys(ctx).forEach((item) => {
-            const component = ctx[item].default
-            app.component(item.replace(/(\.\/components\/)|(\.vue)/g, ''), component)
-        })
     },
     setup() {},
     rootComponents: [],

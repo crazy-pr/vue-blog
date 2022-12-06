@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button type="primary">按钮</el-button>
+    <el-button type="primary">按钮123</el-button>
   </div>
 </template>
 
